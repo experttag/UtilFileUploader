@@ -54,7 +54,7 @@
                                             <tr>
                                                 <td align="left">
                                                     <input type="hidden" name="userName" value="<%=request.getParameter("username")%>">
-                                                    <input type="button" id="input_button"  name="Update User" value="Add User" onclick="updatehomefrm()" >
+                                                    <input type="button" id="input_button"  name="Update User" value="Update User" onclick="updatehomefrm()" >
                                                     <input type="button" id="input_button"  name="Cancel" value="Cancel" onclick="parent.updateuserwin.hide()" >
                                                 </td>
 

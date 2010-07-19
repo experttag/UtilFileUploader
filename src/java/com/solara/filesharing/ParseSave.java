@@ -115,6 +115,10 @@ public class ParseSave {
 
         String root = fileconfig.getProperty("file_root")+ fileconfig.getProperty("file_separator") +user+fileconfig.getProperty("file_separator");
 
+        File saveTo = new File(root);
+        if(!saveTo.exists())
+            saveTo.mkdir();
+
         iter = fileItemsList.iterator();
         while (iter.hasNext()){
                 fileItem = (FileItem)iter.next();
@@ -123,7 +127,7 @@ public class ParseSave {
 
                     if (fileItem.getSize() > 0&&fileItem.getSize()<getMaxFileSize()){
                         fileName = FilenameUtils.getName(fileItem.getName());
-                        File saveTo = new File(root + fileName);
+                        saveTo = new File(saveTo, fileName);
                         try {
                             fileItem.write(saveTo);
                             log.info("(" + fileName + " ) file saved for user (" + user + ")"); 
