@@ -6,12 +6,7 @@
 
 </HEAD>
 <BODY >
-<div id="header">
-    <div id="logo" style="float:left">
-        <img src="images/logo.JPG">
-    </div>
-    
-</div>
+<jsp:include page="common/header.jsp" />
 
 <center>
 <div id="home_back" >
@@ -23,7 +18,7 @@ You are brought to this page, because the <i>Cookie</i> of your web browser is t
 Please turn on the <i>Cookie</i> of your web browser and try again.
 <BR>
 <CENTER>
-<FORM ACTION="index.html" METHOD="GET">
+<FORM ACTION="index.jsp" METHOD="GET">
 <INPUT TYPE="SUBMIT" NAME="button" VALUE="Try Again" id="input_button">
 </FORM>
 </CENTER>
@@ -33,16 +28,7 @@ Please turn on the <i>Cookie</i> of your web browser and try again.
 </div>
 <br><br><br><br><br><br><br><br><br>
 </center>
-<div id="footer" >
-<div id="copyright" style="float:left">
-    <span>Copyright @ Solara Communications</span>
-</div>
+<jsp:include page="common/footer.jsp" />
 
-<div id="copyright" style="float:right">
-    <span style="">647.831.5400 | <a href="javascript:sendmail('info@solaracommunications.com')">info@solaracommunications.com </a></span>
-</div>
-
-
-</div>
 </BODY>
 </HTML>

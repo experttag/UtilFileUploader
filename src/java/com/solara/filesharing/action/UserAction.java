@@ -41,7 +41,7 @@ public class UserAction extends HttpServlet {
         //for add operation
         if(operation.equalsIgnoreCase("1")){
 
-            status = PropertiesDAOHelper.addUser(username,password);
+            status = PropertiesDAOHelper.addUser(username,password,request);
             out.print(status);
 
 

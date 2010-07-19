@@ -6,14 +6,7 @@
 <link href="css/solarastyle.css" rel="stylesheet" type="text/css" media="screen">
 </HEAD>
 <BODY>
-    <div id="header" >
-    <div id="logo" style="float:left">
-        <img src="images/logo.JPG">
-    </div>
-    <!--div id="logo" style="float:right">
-        <img src="images/logo.JPG">
-    </div-->
-</div>
+    <jsp:include page="common/header.jsp" />
 <center>
 
 <div id="home_back">
@@ -25,7 +18,7 @@ The user name and password are invalid.
 Please go back to the starting page and try again.
 <BR>
 <CENTER>
-<FORM ACTION="index.html" METHOD="GET">
+<FORM ACTION="index.jsp" METHOD="GET">
 <INPUT TYPE="SUBMIT" NAME="button" VALUE="Try Again" id="input_button">
 </FORM>
 </CENTER>
@@ -34,17 +27,9 @@ Please go back to the starting page and try again.
 <br><br><br><br><br><br><br><br><br>
 </div>
 
-<div id="footer" >
-<div id="copyright" style="float:left">
-    <span>Copyright @ Solara Communications</span>
-</div>
 
-<div id="copyright" style="float:right">
-    <span style="">647.831.5400 | <a href="javascript:sendmail('info@solaracommunications.com')">info@solaracommunications.com </a></span>
-</div>
+<jsp:include page="common/footer.jsp" />
 
-
-</div>
 </center>
 
 </BODY>

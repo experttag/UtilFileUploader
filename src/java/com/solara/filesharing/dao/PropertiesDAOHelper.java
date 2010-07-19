@@ -7,6 +7,8 @@ package com.solara.filesharing.dao;
 
 import com.solara.filesharing.Constant;
 import java.util.Properties;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 /**
@@ -16,7 +18,7 @@ import org.apache.log4j.Logger;
 public class PropertiesDAOHelper {
     private static Logger log = Logger.getLogger(PropertiesDAOHelper.class);
 
-    public static int addUser(String userName, String password){
+    public static int addUser(String userName, String password,HttpServletRequest req){
 
         int status=0;
         String temp="";
@@ -35,6 +37,11 @@ public class PropertiesDAOHelper {
             prop.setProperty(userName,password);
             pdo.saveProperties(passwordFile);
             status=1;
+            
+            //resetting user list with new user
+            HttpSession session = req.getSession(true);
+            session.setAttribute("userList", prop);
+
             log.info("User added successfully ("+ userName+")");
         }
         else{

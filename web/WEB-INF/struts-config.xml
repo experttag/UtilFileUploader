@@ -17,11 +17,11 @@
 
     <global-forwards>
         <forward name="opensetting" path="/admin/adminsetting.jsp"/>
-        <forward name="index" path="/index.html"/>
-        <forward name="BAD_USER" path="/BadUser.html"/>
-        <forward name="INVALID"  path="/Invalid.html"/>
+        <forward name="index" path="/index.jsp"/>
+        <forward name="BAD_USER" path="/BadUser.jsp"/>
+        <forward name="INVALID"  path="/Invalid.jsp"/>
         <forward name="LIST_FILE"  path="/ListFiles.jsp"/>
-        <forward name="NO_SESSION"  path="/NoSession.html"/>
+        <forward name="NO_SESSION"  path="/NoSession.jsp"/>
 
 
     </global-forwards>

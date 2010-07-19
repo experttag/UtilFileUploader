@@ -10,15 +10,17 @@
 
 <div id="header" >
     <div id="logo" style="float:left">
-       <a href="#"><img src="images/logo.JPG" title="www.solaracommunications.com" style="border-style: none" ></a>
+       <a href="http://solaracommunications.com/"><img src="images/logo.JPG" title="www.solaracommunications.com" style="border-style: none" ></a>
     </div>
     <div id="menu" style="float:right;">
+        <a href="http://solaracommunications.com/">Home</a> 
+
         <%if(user.equalsIgnoreCase("admin")){%>
-        <a href="javascript:opensettinguser()">Setting</a> |
+        | <a href="javascript:opensettinguser()">Setting</a>
         <%}%>
 
         <%if(obj!=null){%>
-        <a href="Login.do?method=logout">Logout</a>
+        | <a href="Login.do?method=logout">Logout</a>
         <%}%>
     </div>
 </div>
